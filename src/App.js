@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import withAppInit from "./hocs/withAppInit";
+import { ReactComponent as SVGSprite } from "./assets/sprite.svg";
+import MainLayout from "./layouts/MainLayout/MainLayout";
+import HeadInfo from "./components/containers/HeadInfo/HeadInfo";
+import Form from "./components/containers/Form/Form";
+import Grid from "./components/containers/Grid/Grid";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <>
+    <SVGSprite />
+    <MainLayout>
+      <HeadInfo />
+      <Form />
+      <Grid />
+    </MainLayout>
+  </>
+);
 
-export default App;
+export default withAppInit(App);

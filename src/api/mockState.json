@@ -1,0 +1,206 @@
+{
+  "headInfo": {
+    "headline": "Personalized meal plan",
+    "paragraph": "You can also access your meal plan via email that you received. If not received, please contact <a href=\"mailto:supportdc@bodyfitplan.me\">supportdc@bodyfitplan.me</a>"
+  },
+  "form": {
+    "headline": "Enter email if you wish to resend the meal plan link",
+    "field": {
+      "type": "email",
+      "placeholder": "E-mail"
+    },
+    "button": {
+      "text": "Resend"
+    }
+  },
+  "weekSelect": [
+    { "id": "1", "text": "Week 1" },
+    { "id": "2", "text": "Week 2" },
+    { "id": "3", "text": "Week 3" },
+    { "id": "4", "text": "Week 4" }
+  ],
+  "daySelect": [
+    { "id": "1", "text": "Day 1" },
+    { "id": "2", "text": "Day 2" },
+    { "id": "3", "text": "Day 3" },
+    { "id": "4", "text": "Day 4" },
+    { "id": "5", "text": "Day 5" },
+    { "id": "6", "text": "Day 6" },
+    { "id": "7", "text": "Day 7" }
+  ],
+  "table": {
+    "cols": [
+      {
+        "id": "col_1",
+        "text": "Breakfast"
+      },
+      {
+        "id": "col_2",
+        "text": "1s snack"
+      },
+      {
+        "id": "col_3",
+        "text": "Main dish"
+      },
+      {
+        "id": "col_4",
+        "text": "Side Dish"
+      },
+      {
+        "id": "col_5",
+        "text": "2nd snack"
+      },
+      {
+        "id": "col_6",
+        "text": "Main dish"
+      },
+      {
+        "id": "col_7",
+        "text": "Side dish"
+      }
+    ],
+    "rows": [
+      {
+        "id": "row_1",
+        "text": "Day 1"
+      },
+      {
+        "id": "row_2",
+        "text": "Day 2"
+      },
+      {
+        "id": "row_3",
+        "text": "Day 3"
+      },
+      {
+        "id": "row_4",
+        "text": "Day 4"
+      },
+      {
+        "id": "row_5",
+        "text": "Day 5"
+      },
+      {
+        "id": "row_6",
+        "text": "Day 6"
+      },
+      {
+        "id": "row_7",
+        "text": "Day 7"
+      }
+    ],
+    "cells": [
+      {
+        "id": "cell_1",
+        "row": "row_1",
+        "col": "col_4",
+        "text": "Thai Turkey Lettuce Cups"
+      },
+      {
+        "id": "cell_2",
+        "row": "row_2",
+        "col": "col_4",
+        "text": "Thai Turkey Lettuce Cups"
+      },
+      {
+        "id": "cell_3",
+        "row": "row_3",
+        "col": "col_4",
+        "text": "Thai Turkey Lettuce Cups"
+      },
+      {
+        "id": "cell_4",
+        "row": "row_4",
+        "col": "col_4",
+        "text": "Thai Turkey Lettuce Cups"
+      },
+      {
+        "id": "cell_5",
+        "row": "row_5",
+        "col": "col_4",
+        "text": "Thai Turkey Lettuce Cups"
+      },
+      {
+        "id": "cell_6",
+        "row": "row_6",
+        "col": "col_4",
+        "text": "Thai Turkey Lettuce Cups"
+      },
+      {
+        "id": "cell_7",
+        "row": "row_7",
+        "col": "col_4",
+        "text": "Thai Turkey Lettuce Cups"
+      },
+      {
+        "id": "cell_8",
+        "row": "row_4",
+        "col": "col_5",
+        "text": "Thai Turkey Lettuce Cups"
+      },
+      {
+        "id": "cell_9",
+        "row": "row_5",
+        "col": "col_5",
+        "text": "Thai Turkey Lettuce Cups"
+      },
+      {
+        "id": "cell_10",
+        "row": "row_5",
+        "col": "col_6",
+        "text": "Thai Turkey Lettuce Cups"
+      },
+      {
+        "id": "cell_11",
+        "row": "row_6",
+        "col": "col_5",
+        "text": "Thai Turkey Lettuce Cups"
+      }
+    ]
+  },
+  "downloads": [
+    {
+      "text": "Download exercises"
+    },
+    {
+      "text": "Download insructions"
+    },
+    {
+      "text": "Download meal plan"
+    }
+  ],
+  "recomendations": {
+    "headline": "Recommendations",
+    "intro": "This is your meal plan that we customized individually for you. Always consult your doctor following any nutrition or exercise plan. Your personalized meal plan contains dishes based on your choice. Click on a dish to see the recipe. We calculated the food according to your parameters. In order to benefit from a well-balanced diet properly, check our tips below.",
+    "items": [
+      {
+        "id": "1",
+        "icon": "1",
+        "text": "Your average portion limit should not exceed:\n\nBreakfast – 0.55 lb (250 g)\nLunch – 0.8 lb (350 g)\nLunch Side Dish – 0.2 lb (100 g)\nSnack – 0.2 lb (100 g)\nDinner – 0.4 lb (200 g)\nDinner Side Dish – 0.4 lb (200 g)\nLate Snack – 0.2 lb (100 g)"
+      },
+      {
+        "id": "2",
+        "icon": "2",
+        "text": "You should not feel hunger, but also eating too often may be harmful to the program. That’s why we recommend eating every 2-3 hours. You should abstain from alcohol when following the plan. If you are in a situation you cannot refuse an offer to drink, please limit yourself with a glass of red wine."
+      },
+      {
+        "id": "3",
+        "icon": "3",
+        "text": "Essential products are recommended based on your preferences. Follow the plan for best results. However, you keep the right to substitute your ‘essential ingredients’ with a respective position from other days. ‘Ingredients to your taste’ can be ignored if you dislike."
+      },
+      {
+        "id": "4",
+        "icon": "4",
+        "text": "We recommend drinking a glass of lemon water just after waking up. This will help boost your metabolism. Do not ignore the recommended daily water amount to be consumed. Note that other beverages such as tea, coffee or juice cannot be counted as water."
+      },
+      {
+        "id": "5",
+        "text": "Our key recommendation is physical activity. Any meal program becomes more efficient when combined with fitness, running or at least regular walking. We provide an individual list of home exercises to boost your metabolism. These exercises are essential for weight loss and should be done on a regular basis, at least 5 times a week to achieve your goals."
+      },
+      {
+        "id": "6",
+        "text": "Do not forget to sleep properly. We strongly recommend falling asleep at 11 pm. You should sleep at least 7 hours to recover physically and mentally. This will reduce the stress you feel and infuse power to your body."
+      }
+    ]
+  }
+}
