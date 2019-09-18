@@ -2,11 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import { StyledCell } from "./StyledCell";
 
-const Cell = ({ row, col, content, onHover }) => (
-  <StyledCell onMouseOver={() => onHover(col, row)}>
-    <div className={"cell__inner"}>
-      col-{col}, row-{row} <br /> {content && "content"}
-    </div>
+const Cell = ({ rowId, colId, content, hoverOn, hoverOut, isHighlighted }) => (
+  <StyledCell
+    onMouseEnter={() => hoverOn(colId, rowId)}
+    onMouseLeave={hoverOut}
+    hasContent={content ? true : false}
+    isHighlighted={isHighlighted}
+    style={{ backgroundImage: content && `url(${content.image})` }}
+  >
+    <div className={"cell__inner"}>{content && content.text}</div>
   </StyledCell>
 );
 

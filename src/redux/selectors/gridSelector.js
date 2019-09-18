@@ -23,23 +23,29 @@ export const gridSelector = createSelector(
     const filledRows = Object.values(rows.byId).filter(({ id }) =>
       rowsIdSet.has(id)
     );
+    filledRows.forEach((row, index) => (row.rowId = index));
+
+    const filledCols = Object.values(cols.byId).map((col, colId) => ({
+      ...col,
+      colId
+    }));
 
     const grid = {
-      columns: Object.values(cols.byId),
+      cols: filledCols,
       rows: filledRows,
-      items: []
+      cells: []
     };
-    const { items: gridItems } = grid;
+    const { cells: gridCells } = grid;
 
     for (let i = rowsLength; i > 0; i--) {
-      gridItems.push(...new Array(colsLength));
+      gridCells.push(...new Array(colsLength));
     }
 
-    for (let i = gridItems.length - 1; i >= 0; i--) {
-      gridItems[i] = {
+    for (let i = gridCells.length - 1; i >= 0; i--) {
+      gridCells[i] = {
         id: i,
-        row: Math.floor(i / colsLength),
-        col: i % colsLength
+        rowId: Math.floor(i / colsLength),
+        colId: i % colsLength
       };
     }
 
@@ -47,7 +53,7 @@ export const gridSelector = createSelector(
       const colNum = colsAllIds.indexOf(cell.col);
       const rowNum = rowsAllIds.indexOf(cell.row);
 
-      gridItems[colsLength * rowNum + colNum].content = cell;
+      gridCells[colsLength * rowNum + colNum].content = cell.content;
     });
 
     return grid;

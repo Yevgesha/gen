@@ -6,24 +6,28 @@ export const StyledGrid = styled.div`
     flex-flow: row nowrap;
   }
 
-  .grid__items-wrapper {
-    flex-grow: 1;
-  }
-
-  .grid__side-panel {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  .grid__left-panel {
+    padding-top: 52px;
+    margin-right: 16px;
   }
 
   .grid__top-panel {
-    margin-bottom: 32px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
   }
 
-  .grid__top-panel,
-  .grid__items {
+  .grid__cells-wrapper {
+    position: relative;
+    padding-top: 52px;
+    flex-grow: 1;
+  }
+
+  .grid__cells {
     display: grid;
-    grid-template-columns: ${({ columns }) => `repeat(${columns}, 1fr)`};
+    grid-template-columns: ${({ cols }) => `repeat(${cols}, 1fr)`};
     grid-gap: 16px;
   }
 `;

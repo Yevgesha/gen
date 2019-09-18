@@ -1,38 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Container from "../../../layouts/Container/Container";
 import Cell from "../Cell/Cell";
+import GridSidePanel from "../GridSidePanel/GridSidePanel";
 import { StyledGrid } from "./StyledGrid";
 
-const onHover = (colId, rowId) => {
-  console.log(colId, rowId);
-};
+const highLightItem = item => ({ ...item, isHighlighted: true });
 
-const Grid = ({ grid: { items, columns, rows } }) => (
-  <StyledGrid columns={columns.length} className={"grid"}>
-    <Container align={"right"}>
-      <ul className="grid__top-panel">
-        {columns.map(({ id, text }) => (
-          <li key={id}>{text}</li>
-        ))}
-      </ul>
-    </Container>
-    <div className="grid__body">
-      <ul className="grid__side-panel">
-        {rows.map(({ id, text }) => (
-          <li key={id}>{text}</li>
-        ))}
-      </ul>
-      <Container align={"right"} className="grid__items-wrapper">
-        <ul className={"grid__items"}>
-          {items.map(item => (
-            <Cell key={item.id} onHover={onHover} {...item} />
-          ))}
-        </ul>
-      </Container>
-    </div>
-  </StyledGrid>
-);
+const highLightList = (colId, rowId, items) =>
+  items.map(item => {
+    if (item.colId === colId || item.rowId === rowId) {
+      return highLightItem(item);
+    } else {
+      return item;
+    }
+  });
+
+const highLightGrid = (colId, rowId, { cols, rows, cells }) => ({
+  cols: highLightList(colId, rowId, cols),
+  rows: highLightList(colId, rowId, rows),
+  cells: highLightList(colId, rowId, cells)
+});
+
+const Grid = ({ grid }) => {
+  const [statefulGrid, updGridState] = useState({ ...grid });
+  const { cells, cols, rows } = statefulGrid;
+
+  return (
+    <StyledGrid cols={cols.length} className={"grid"}>
+      <div className="grid__body">
+        <GridSidePanel
+          items={rows}
+          direction={"column"}
+          className="grid__left-panel"
+        />
+        <Container align={"right"} className="grid__cells-wrapper">
+          <GridSidePanel items={cols} className="grid__top-panel" />
+          <ul className={"grid__cells"}>
+            {cells.map(cell => (
+              <Cell
+                key={cell.id}
+                hoverOn={(colId, rowId) =>
+                  updGridState(highLightGrid(colId, rowId, grid))
+                }
+                hoverOut={() => updGridState(grid)}
+                {...cell}
+              />
+            ))}
+          </ul>
+        </Container>
+      </div>
+    </StyledGrid>
+  );
+};
 
 Grid.propTypes = {
   grid: PropTypes.object.isRequired
