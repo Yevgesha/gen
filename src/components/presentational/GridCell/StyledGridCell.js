@@ -8,7 +8,7 @@ const defaultBGMask =
 const hoverBGMask = "rgba(224, 224, 224, 0.55)";
 const hoverBGMaskMain = "rgba(29, 233, 182, 0.7)";
 
-export const StyledCell = styled.li`
+export const StyledGridCell = styled.li`
   position: relative;
   overflow: hidden;
   padding-bottom: 100%;
@@ -64,5 +64,6 @@ export const StyledCell = styled.li`
     align-items: flex-end;
     justify-content: center;
     padding: 16px 0;
+    font-weight: 600;
   }
 `;

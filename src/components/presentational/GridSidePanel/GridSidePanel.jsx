@@ -23,7 +23,7 @@ const GridSidePanel = ({ items, direction, className }) => (
 );
 
 GridSidePanel.propTypes = {
-  items: PropTypes.array,
+  items: PropTypes.array.isRequired,
   direction: PropTypes.string,
   className: PropTypes.string
 };

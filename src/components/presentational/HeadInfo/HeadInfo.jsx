@@ -14,8 +14,8 @@ const HeadInfo = ({ headline, paragraph }) => (
 );
 
 HeadInfo.propTypes = {
-  headline: PropTypes.string,
-  paragraph: PropTypes.string
+  headline: PropTypes.string.isRequired,
+  paragraph: PropTypes.string.isRequired
 };
 
 export default HeadInfo;

@@ -14,19 +14,12 @@
     }
   },
   "weekSelect": [
-    { "id": "1", "text": "Week 1" },
-    { "id": "2", "text": "Week 2" },
-    { "id": "3", "text": "Week 3" },
-    { "id": "4", "text": "Week 4" }
-  ],
-  "daySelect": [
-    { "id": "1", "text": "Day 1" },
-    { "id": "2", "text": "Day 2" },
-    { "id": "3", "text": "Day 3" },
-    { "id": "4", "text": "Day 4" },
-    { "id": "5", "text": "Day 5" },
-    { "id": "6", "text": "Day 6" },
-    { "id": "7", "text": "Day 7" }
+    { "value": "week_1", "label": "Week 1" },
+    { "value": "week_2", "label": "Week 2" },
+    { "value": "week_3", "label": "Week 3" },
+    { "value": "week_4", "label": "Week 4" },
+    { "value": "week_5", "label": "Week 5" },
+    { "value": "week_6", "label": "Week 6" }
   ],
   "table": {
     "cols": [
@@ -96,7 +89,7 @@
         "col": "col_4",
         "content": {
           "text": "Thai Turkey Lettuce Cups",
-          "image": "http://lorempixel.com/250/250/food"
+          "image": "food_1.jpg"
         }
       },
       {
@@ -105,7 +98,7 @@
         "col": "col_4",
         "content": {
           "text": "Thai Turkey Lettuce Cups",
-          "image": "http://lorempixel.com/250/250/food"
+          "image": "food_2.jpg"
         }
       },
       {
@@ -114,7 +107,7 @@
         "col": "col_4",
         "content": {
           "text": "Thai Turkey Lettuce Cups",
-          "image": "http://lorempixel.com/250/250/food"
+          "image": "food_3.jpg"
         }
       },
       {
@@ -123,7 +116,7 @@
         "col": "col_4",
         "content": {
           "text": "Thai Turkey Lettuce Cups",
-          "image": "http://lorempixel.com/250/250/food"
+          "image": "food_4.jpg"
         }
       },
       {
@@ -132,7 +125,7 @@
         "col": "col_4",
         "content": {
           "text": "Thai Turkey Lettuce Cups",
-          "image": "http://lorempixel.com/250/250/food"
+          "image": "food_1.jpg"
         }
       },
       {
@@ -141,7 +134,7 @@
         "col": "col_4",
         "content": {
           "text": "Thai Turkey Lettuce Cups",
-          "image": "http://lorempixel.com/250/250/food"
+          "image": "food_2.jpg"
         }
       },
       {
@@ -150,7 +143,7 @@
         "col": "col_4",
         "content": {
           "text": "Thai Turkey Lettuce Cups",
-          "image": "http://lorempixel.com/250/250/food"
+          "image": "food_3.jpg"
         }
       },
       {
@@ -159,7 +152,7 @@
         "col": "col_5",
         "content": {
           "text": "Thai Turkey Lettuce Cups",
-          "image": "http://lorempixel.com/250/250/food"
+          "image": "food_4.jpg"
         }
       },
       {
@@ -168,7 +161,7 @@
         "col": "col_5",
         "content": {
           "text": "Thai Turkey Lettuce Cups",
-          "image": "http://lorempixel.com/250/250/food"
+          "image": "food_1.jpg"
         }
       },
       {
@@ -177,7 +170,7 @@
         "col": "col_6",
         "content": {
           "text": "Thai Turkey Lettuce Cups",
-          "image": "http://lorempixel.com/250/250/food"
+          "image": "food_2.jpg"
         }
       },
       {
@@ -186,52 +179,60 @@
         "col": "col_5",
         "content": {
           "text": "Thai Turkey Lettuce Cups",
-          "image": "http://lorempixel.com/250/250/food"
+          "image": "food_3.jpg"
         }
       }
     ]
   },
   "downloads": [
     {
-      "text": "Download exercises"
+      "id": "download_1",
+      "sourceLocation": "location_1",
+      "sourceName": "Download exercises"
     },
     {
-      "text": "Download insructions"
+      "id": "download_2",
+      "sourceLocation": "location_2",
+      "sourceName": "Download insructions"
     },
     {
-      "text": "Download meal plan"
+      "id": "download_3",
+      "sourceLocation": "location_3",
+      "sourceName": "Download meal plan"
     }
   ],
-  "recomendations": {
+  "recommendations": {
     "headline": "Recommendations",
     "intro": "This is your meal plan that we customized individually for you. Always consult your doctor following any nutrition or exercise plan. Your personalized meal plan contains dishes based on your choice. Click on a dish to see the recipe. We calculated the food according to your parameters. In order to benefit from a well-balanced diet properly, check our tips below.",
     "items": [
       {
-        "id": "1",
-        "icon": "1",
+        "id": "rec_1",
+        "icon": "rec_1",
         "text": "Your average portion limit should not exceed:\n\nBreakfast – 0.55 lb (250 g)\nLunch – 0.8 lb (350 g)\nLunch Side Dish – 0.2 lb (100 g)\nSnack – 0.2 lb (100 g)\nDinner – 0.4 lb (200 g)\nDinner Side Dish – 0.4 lb (200 g)\nLate Snack – 0.2 lb (100 g)"
       },
       {
-        "id": "2",
-        "icon": "2",
+        "id": "rec_2",
+        "icon": "rec_2",
         "text": "You should not feel hunger, but also eating too often may be harmful to the program. That’s why we recommend eating every 2-3 hours. You should abstain from alcohol when following the plan. If you are in a situation you cannot refuse an offer to drink, please limit yourself with a glass of red wine."
       },
       {
-        "id": "3",
-        "icon": "3",
+        "id": "rec_3",
+        "icon": "rec_3",
         "text": "Essential products are recommended based on your preferences. Follow the plan for best results. However, you keep the right to substitute your ‘essential ingredients’ with a respective position from other days. ‘Ingredients to your taste’ can be ignored if you dislike."
       },
       {
-        "id": "4",
-        "icon": "4",
+        "id": "rec_4",
+        "icon": "rec_4",
         "text": "We recommend drinking a glass of lemon water just after waking up. This will help boost your metabolism. Do not ignore the recommended daily water amount to be consumed. Note that other beverages such as tea, coffee or juice cannot be counted as water."
       },
       {
-        "id": "5",
+        "id": "rec_5",
+        "icon": "rec_5",
         "text": "Our key recommendation is physical activity. Any meal program becomes more efficient when combined with fitness, running or at least regular walking. We provide an individual list of home exercises to boost your metabolism. These exercises are essential for weight loss and should be done on a regular basis, at least 5 times a week to achieve your goals."
       },
       {
-        "id": "6",
+        "id": "rec_6",
+        "icon": "rec_6",
         "text": "Do not forget to sleep properly. We strongly recommend falling asleep at 11 pm. You should sleep at least 7 hours to recover physically and mentally. This will reduce the stress you feel and infuse power to your body."
       }
     ]

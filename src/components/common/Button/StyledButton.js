@@ -16,7 +16,8 @@ export const StyledButton = styled.button`
   font-weight: 600;
   text-align: center;
   color: #ffffff;
+  transition: 0.2s;
   &:hover {
-    background-color: red;
+    background-color: rgba(0, 191, 165, 0.7);
   }
 `;

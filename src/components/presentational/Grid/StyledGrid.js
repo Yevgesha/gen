@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 export const StyledGrid = styled.div`
+  margin-bottom: 72px;
+  position: relative;
+  z-index: 1;
+
   .grid__body {
     display: flex;
     flex-flow: row nowrap;
@@ -21,13 +25,8 @@ export const StyledGrid = styled.div`
 
   .grid__cells-wrapper {
     position: relative;
+    z-index: 1;
     padding-top: 52px;
     flex-grow: 1;
-  }
-
-  .grid__cells {
-    display: grid;
-    grid-template-columns: ${({ cols }) => `repeat(${cols}, 1fr)`};
-    grid-gap: 16px;
   }
 `;

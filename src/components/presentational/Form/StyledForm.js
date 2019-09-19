@@ -24,6 +24,8 @@ export const StyledForm = styled.form`
     position: absolute;
     top: 16px;
     right: 16px;
+    color: #bdbdbd;
+    transition: 0.2s;
 
     &:after {
       content: "";
@@ -32,6 +34,10 @@ export const StyledForm = styled.form`
       left: -16px;
       right: -16px;
       bottom: -16px;
+    }
+
+    &:hover {
+      color: #e91e63;
     }
   }
 

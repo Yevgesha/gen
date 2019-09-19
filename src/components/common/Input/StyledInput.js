@@ -5,6 +5,7 @@ export const StyledInput = styled.input`
   height: 48px;
   background: #ffffff;
   border: 1px solid #858585;
+  border-color: ${({ isEmpty, isValid }) => !isEmpty && !isValid && "red"};
   box-sizing: border-box;
   border-radius: 8px;
   text-align: center;

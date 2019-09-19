@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Container from "../../../layouts/Container/Container";
-import Cell from "../Cell/Cell";
+import GridCells from "../GridCells/GridCells";
 import GridSidePanel from "../GridSidePanel/GridSidePanel";
 import { StyledGrid } from "./StyledGrid";
 
@@ -27,7 +27,7 @@ const Grid = ({ grid }) => {
   const { cells, cols, rows } = statefulGrid;
 
   return (
-    <StyledGrid cols={cols.length} className={"grid"}>
+    <StyledGrid className={"grid"}>
       <div className="grid__body">
         <GridSidePanel
           items={rows}
@@ -36,18 +36,14 @@ const Grid = ({ grid }) => {
         />
         <Container align={"right"} className="grid__cells-wrapper">
           <GridSidePanel items={cols} className="grid__top-panel" />
-          <ul className={"grid__cells"}>
-            {cells.map(cell => (
-              <Cell
-                key={cell.id}
-                hoverOn={(colId, rowId) =>
-                  updGridState(highLightGrid(colId, rowId, grid))
-                }
-                hoverOut={() => updGridState(grid)}
-                {...cell}
-              />
-            ))}
-          </ul>
+          <GridCells
+            hoverOn={(colId, rowId) =>
+              updGridState(highLightGrid(colId, rowId, grid))
+            }
+            hoverOut={() => updGridState(grid)}
+            colsLength={cols.length}
+            cells={cells}
+          />
         </Container>
       </div>
     </StyledGrid>
@@ -55,7 +51,11 @@ const Grid = ({ grid }) => {
 };
 
 Grid.propTypes = {
-  grid: PropTypes.object.isRequired
+  grid: PropTypes.shape({
+    cols: PropTypes.array.isRequired,
+    rows: PropTypes.array.isRequired,
+    cells: PropTypes.array.isRequired
+  }).isRequired
 };
 
 export default Grid;

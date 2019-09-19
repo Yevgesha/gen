@@ -22,14 +22,12 @@ const withAppInit = WrappedComponent =>
     }
   };
 
-const mapStateToProps = state => ({});
-
 const mapDispatchToProps = {
   setInitState
 };
 
 export default WrappedComponent =>
   connect(
-    mapStateToProps,
+    null,
     mapDispatchToProps
   )(withAppInit(WrappedComponent));
