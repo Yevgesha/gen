@@ -6,11 +6,21 @@ const Cell = ({ rowId, colId, content, hoverOn, hoverOut, isHighlighted }) => (
   <StyledCell
     onMouseEnter={() => hoverOn(colId, rowId)}
     onMouseLeave={hoverOut}
-    hasContent={content ? true : false}
+    hasContent={!!content}
     isHighlighted={isHighlighted}
-    style={{ backgroundImage: content && `url(${content.image})` }}
+    className={"cell"}
   >
-    <div className={"cell__inner"}>{content && content.text}</div>
+    {content && (
+      <>
+        {content.image && (
+          <div
+            className={"cell__bg"}
+            style={{ backgroundImage: `url(${content.image})` }}
+          />
+        )}
+        {content.text && <div className={"cell__inner"}>{content.text}</div>}
+      </>
+    )}
   </StyledCell>
 );
 
