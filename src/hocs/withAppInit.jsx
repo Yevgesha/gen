@@ -5,20 +5,37 @@ import { setInitState } from "../redux/actions/index";
 
 const withAppInit = WrappedComponent =>
   class extends Component {
-    state = { isDataLoaded: false };
+    state = { isDataLoaded: false, error: "" };
 
-    componentDidMount = async () => {
-      await fetch(API_URL)
-        .then(resp => resp.json())
-        .then(data => this.props.setInitState(data));
-
+    fetchResolve = json => {
+      this.props.setInitState(json);
       this.setState({ isDataLoaded: true });
     };
 
-    render() {
-      const { isDataLoaded } = this.state;
+    fetchReject = error => {
+      this.setState({ error: error.toString() });
+    };
 
-      return isDataLoaded && <WrappedComponent {...this.props} />;
+    componentDidMount = async () => {
+      const { fetchResolve, fetchReject } = this;
+
+      await fetch(API_URL)
+        .then(resp => resp.json())
+        .then(fetchResolve, fetchReject);
+    };
+
+    render() {
+      const { isDataLoaded, error } = this.state;
+
+      if (error) {
+        return error;
+      } else {
+        return isDataLoaded ? (
+          <WrappedComponent {...this.props} />
+        ) : (
+          "Loading..."
+        );
+      }
     }
   };
 
